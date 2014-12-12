@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Custom suite">
+	<parameter name="configFile" value="OM-stage.properties"></parameter>
+	<test verbose="2" name="Custom test" preserve-order="true">
+		<classes>
+			<class name="com.example.tests.TestSelectDealer"></class>
+			<class name="com.example.tests.Test_E2E_918"></class>
+		</classes>
+	</test>
+</suite>

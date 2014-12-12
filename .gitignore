@@ -7,6 +7,9 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+bin/
+src/build/
+test-output/
 
 # Windows Installer files
 *.cab
