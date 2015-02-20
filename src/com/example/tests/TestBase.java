@@ -10,7 +10,7 @@ import com.example.pages.BasePage;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Configuration.timeout;
-import static com.codeborne.selenide.Selenide.*;
+import static org.testng.Assert.assertTrue;
 
 public class TestBase {
 
@@ -42,6 +42,16 @@ public class TestBase {
 	public void tearDown() throws Exception {
 		ApplicationManager.getInstance().stop();
 	}
+	
+	
+	public void checkThatItemIsAddedCorrectly(BasePage mainPage,int oldItemsNumber, double oldItemsPrice, int quantity, String itemPrice) {
+		int newItemsNumber = oldItemsNumber + quantity;
+		double newItemsPrice = oldItemsPrice + quantity*Double.parseDouble(itemPrice);
+		String basketText = mainPage.basketText().text();
+		assertTrue(basketText.startsWith(Integer.toString(newItemsNumber) + " товар"), "Текст: " + basketText + ", начало ожидалось:  " + Integer.toString(newItemsNumber) + " товар");
+		assert (newItemsPrice == mainPage.getSumInBasketFromHeader());
+	}
+
 
 	
 	

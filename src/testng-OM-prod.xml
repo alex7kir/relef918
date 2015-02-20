@@ -3,9 +3,10 @@
 	<parameter name="configFile" value="OM-prod.properties"></parameter>
 	<test verbose="2" name="Custom test" preserve-order="true">
 		<classes>
-<!-- 			<class name="com.example.tests.TestSelectDealer"></class> -->
-<!-- 			<class name="com.example.tests.Test_E2E_918"></class> -->
+			<class name="com.example.tests.TestSelectDealer"></class>
+			<class name="com.example.tests.Test_E2E_918"></class>
 			<class name="com.example.tests.TestMainPage"></class>
+			<class name="com.example.tests.TestCatalogPage"></class>
 		</classes>
 	</test>
 </suite>

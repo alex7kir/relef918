@@ -5,6 +5,7 @@
 		<classes>
 			<class name="com.example.tests.TestSelectDealer"></class>
 			<class name="com.example.tests.Test_E2E_918"></class>
+			<class name="com.example.tests.TestMainPage"></class>
 		</classes>
 	</test>
 </suite>

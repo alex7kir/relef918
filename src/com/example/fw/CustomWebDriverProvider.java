@@ -30,6 +30,8 @@ public class CustomWebDriverProvider implements WebDriverProvider {
 			e.printStackTrace();
 		}
 
+		bmp.setSocketOperationTimeout(300000);
+		bmp.setConnectionTimeout(300000);
 		bmp.autoBasicAuthorization("", app.getProperty("basic_auth_login"), app.getProperty("basic_auth_password"));
 
 		try {

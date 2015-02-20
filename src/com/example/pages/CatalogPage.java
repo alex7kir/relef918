@@ -1,9 +1,9 @@
 package com.example.pages;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.$;
-
-import org.openqa.selenium.By;
+//import static com.codeborne.selenide.Condition.*;
+//import static com.codeborne.selenide.Selenide.$;
+//
+//import org.openqa.selenium.By;
 
 public class CatalogPage extends MainPage{
 	

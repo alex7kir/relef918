@@ -25,11 +25,12 @@ public class BasePage {
 		$(By.cssSelector("form.auth-form.auth-form_auth")).waitUntil(visible, 40000);
 	}
 	
-	public void login_as_dealer(String login, String password) {
+	public ProfilePage login_as_dealer(String login, String password) {
 		$(By.linkText("Вход для участников программы")).click();
 		$("#loginInput").setValue(login);
 		$("#passwordInput").setValue(password);
 		$(By.name("Login")).click();
+		return page(ProfilePage.class);
 	}
 	
 	
@@ -54,6 +55,11 @@ public class BasePage {
 	public ProfilePage openProfile() {
 		$("a.b-authorized-user__name").click();
 		return page(ProfilePage.class);
+	}
+	
+	public void registerNewUser(String company, String surname, String first_name, String middle_name, String phone, String email, String password) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	public void fillInRegistrationForm() {
@@ -84,5 +90,4 @@ public class BasePage {
 		}
 		return price;
 	}
-
 }

@@ -31,7 +31,6 @@ public class Test_E2E_918 extends TestBase{
 			// ����� ������
 		catalogPage.chooseDealer(app.getProperty("shop1_city"), app.getProperty("shop1_name"));
 			// �����
-//		refresh(); //TODO think about how to remove this workaround
 		itemPage = catalogPage.search(code);
 			// ���������� � �������
 		itemPage.buttonAddToBasket().should(exist);
@@ -50,8 +49,7 @@ public class Test_E2E_918 extends TestBase{
 			// Logout
 		orderDonePage.logout();
 			// ������������ �������
-		catalogPage.login_as_dealer(app.getProperty("dealer_login"), app.getProperty("dealer_password"));
-		profilePage = catalogPage.openProfile();
+		profilePage = catalogPage.login_as_dealer(app.getProperty("dealer_login"), app.getProperty("dealer_password"));
 		profilePage.headerShouldBe("Новые заказы");
 		profilePage.shouldContainOrder(order, price);
 		profilePage.logout();
